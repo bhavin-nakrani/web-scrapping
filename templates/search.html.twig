@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block title %}Welcome To Home{% endblock %}
+{% block body %}
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <h1>Search</h1>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                {% if(all_links) %}
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">URL</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for all_link in all_links %}
+                        <tr>
+                            <th scope="row">{{ loop.index }}</th>
+                            <td>{{ all_link }}</td>
+
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
+                <a href="{{ path('homepage') }}" class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}
