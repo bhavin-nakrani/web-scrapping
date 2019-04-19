@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}Welcome To Home{% endblock %}
+{% block body %}
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <h1>Website URL</h1>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="{{ path('search') }}" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Website URL</label>
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Enter website url">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}
